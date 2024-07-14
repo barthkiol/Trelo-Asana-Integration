@@ -1,12 +1,7 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Net.Http.Headers;
-using Microsoft.OpenApi.Models;
+﻿using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Text;
-using Aplicacao_integracao.Models.Trello;
-using Aplicacao_integracao.Models.Asana;
+using Aplicacao_integracao.Models;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Aplicacao_integracao
@@ -131,5 +126,41 @@ namespace Aplicacao_integracao
             return response;
         }
 
+        internal static async Task<List<TrelloMember>> GetTrelloMembersAsync(Configuration config, string id)
+        {
+            HttpClient client = new HttpClient();
+
+            var queryString = QueryString
+                .Create("key", config.TrelloKey)
+                .Add("token", config.TrelloToken);
+
+            var uri = new Uri($"https://api.trello.com/1/boards/{id}/members{queryString}");
+
+            var httpRequest = new HttpRequestMessage(HttpMethod.Get, uri);
+
+            var response = await client.SendAsync(httpRequest);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            var members = JsonSerializer.Deserialize<List<TrelloMember>>(responseContent);
+
+            return members;
+        }
+
+        internal static async Task<AsanaMemberResponse> GetAsanaMembersAsync(Configuration config)
+        {
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", config.AsanaToken);
+
+            var uri = new Uri($"https://app.asana.com/api/1.0/users");
+
+            var httpRequest = new HttpRequestMessage(HttpMethod.Get, uri);
+
+            var response = await client.SendAsync(httpRequest);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            var asanaMembers = JsonSerializer.Deserialize<AsanaMemberResponse>(responseContent);
+
+            return asanaMembers;
+        }
     }
 }

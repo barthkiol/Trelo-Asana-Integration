@@ -2,7 +2,7 @@
 using System.Text.Json.Serialization;
 
 
-namespace Aplicacao_integracao.Models.Asana
+namespace Aplicacao_integracao.Models
 {
     public sealed record ProjectResponse
     (
@@ -31,6 +31,7 @@ namespace Aplicacao_integracao.Models.Asana
         [property: JsonPropertyName("name")] string Name,
         [property: JsonPropertyName("completed")] bool Completed,
         [property: JsonPropertyName("notes")] string Description,
+        [property: JsonPropertyName("assignee")] string? Member,
         [property: JsonPropertyName("assignee_section")] string? Section,
         [property: JsonPropertyName("start_at")] DateTime Start,
         [property: JsonPropertyName("due_at")] DateTime Due,
@@ -54,7 +55,8 @@ namespace Aplicacao_integracao.Models.Asana
         [property: JsonPropertyName("desc")] string Description,
         [property: JsonPropertyName("assignee_section")] string Section,
         [property: JsonPropertyName("start")] DateTime Start,
-        [property: JsonPropertyName("due")] DateTime Due
+        [property: JsonPropertyName("due")] DateTime Due,
+        [property: JsonPropertyName("idMembers")] List<string> Members
     );
 
     public sealed record Configuration
@@ -63,13 +65,20 @@ namespace Aplicacao_integracao.Models.Asana
         [property: JsonPropertyName("trelloKey")] string TrelloKey,
         [property: JsonPropertyName("trelloToken")] string TrelloToken,
         [property: JsonPropertyName("asanaToken")] string AsanaToken,
-        [property: JsonPropertyName("projectsMapper")] List<ProjectMapper> ProjectsMapper
+        [property: JsonPropertyName("projectsMapper")] List<ProjectMapper> ProjectsMapper,
+        [property: JsonPropertyName("memberMapper")] List<MemberMapper> MemberMapper
     );
 
     public sealed record ProjectMapper
     (
         [property: JsonPropertyName("trelloBoard")] string TrelloBoard,
         [property: JsonPropertyName("asanaProject")] string AsanaProject
+    );
+
+    public sealed record MemberMapper
+    (
+        [property: JsonPropertyName("trelloMember")] string TrelloMember,
+        [property: JsonPropertyName("asanaMember")] string AsanaMember
     );
 
     public sealed record ApiResponse
@@ -80,6 +89,21 @@ namespace Aplicacao_integracao.Models.Asana
         [property: JsonPropertyName("listsCreated")] int? ListsCreated = 0
     );
 
+    public sealed record TrelloMember
+    (
+        [property: JsonPropertyName("id")] string Id,
+        [property: JsonPropertyName("fullName")] string Name
+    );
 
+    public sealed record AsanaMemberResponse
+    (
+        [property: JsonPropertyName("data")] List<AsanaMember> Data
+    );
+
+    public sealed record AsanaMember
+    (
+        [property: JsonPropertyName("gid")] string Id,
+        [property: JsonPropertyName("name")] string Name
+    );
 }
 

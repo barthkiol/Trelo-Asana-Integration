@@ -1,6 +1,5 @@
 ﻿#nullable enable
-using Aplicacao_integracao.Models.Asana;
-using Aplicacao_integracao.Models.Trello;
+using Aplicacao_integracao.Models;
 
 namespace Aplicacao_integracao
 {
@@ -15,7 +14,7 @@ namespace Aplicacao_integracao
             );
         }
 
-        public static AsanaTask ToAsanaTask(TrelloCard card, string section, string projects)
+        public static AsanaTask ToAsanaTask(TrelloCard card, string member, string list, string projects)
         {
             return new AsanaTask
             (
@@ -23,8 +22,9 @@ namespace Aplicacao_integracao
                Description: card.Description,
                Completed: card.Closed,
                Due: card.Due,
+               Member: string.IsNullOrWhiteSpace(member) ? null : member,
                Start: card.Start,
-               Section: card.Section,
+               Section: list,
                Projects: new List<string> { projects }
             );
         }
