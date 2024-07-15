@@ -1,0 +1,28 @@
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\appsettings.Development.json
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\appsettings.json
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Aplicacao integracao.exe
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Aplicacao integracao.deps.json
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Aplicacao integracao.runtimeconfig.json
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Aplicacao integracao.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Aplicacao integracao.pdb
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.csproj.AssemblyReference.cache
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.GeneratedMSBuildEditorConfig.editorconfig
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.AssemblyInfoInputs.cache
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.AssemblyInfo.cs
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.csproj.CoreCompileInputs.cache
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.MvcApplicationPartsAssemblyInfo.cs
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.MvcApplicationPartsAssemblyInfo.cache
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\staticwebassets.build.json
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\staticwebassets.development.json
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\scopedcss\bundle\Aplicacao integracao.styles.css
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.csproj.CopyComplete
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\refint\Aplicacao integracao.dll
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.pdb
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\Aplicacao integracao.genruntimeconfig.cache
+E:\dotnet\Aplicacao integracao\Aplicacao integracao\obj\Debug\net6.0\ref\Aplicacao integracao.dll
